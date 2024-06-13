@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+  src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
 }
 
 :root {
@@ -19,18 +19,17 @@
 body {
   min-height: 100vh;
   max-width: 100%;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  background-color: var(--off-black);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  background-color: var(--off-black);
-  color: white;
-  font-family: 'Inter', sans-serif;
+  flex-direction: column;
 }
 
 article.card-container {
-  border: none;
-  border-radius: 8px;
   width: 30%;
   height: fit-content;
   padding: .8rem;
@@ -39,6 +38,8 @@ article.card-container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: none;
+  border-radius: 8px;
 }
 
 
@@ -50,10 +51,11 @@ img {
   width: 120px;
   border: none;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-div {
-  margin-top: 1.3rem;
+section.info-text {
+  margin-top: 1rem;
 }
 
 h2 {
@@ -72,7 +74,7 @@ p {
 }
 
 ul.user-links {
-  margin-top: 2rem;
+  margin-top: 1rem;
   list-style: none;
   width: 100%;
   display: flex;
@@ -100,7 +102,6 @@ li.user-link:hover {
 }
 
 @media (width <= 768px) {
-  
   body {
     padding: 2rem;
   }
